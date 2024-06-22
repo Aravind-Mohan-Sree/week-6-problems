@@ -7,7 +7,7 @@ for (let i = 100; i > 0; i--) {
   content += i + '\n';
 }
 
-fs.writeFile ('./files/sample.txt', content, (err) => {
+fs.writeFile('./files/sample.txt', content, (err) => {
   if (err) {
     console.log(err);
   } else {

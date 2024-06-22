@@ -1,11 +1,11 @@
 // sample callback for greeting someone.
-function greet (wish, callback) {
+function greet(wish, callback) {
   this.wish = wish;
   callback();
 }
 
-function content () {
+function content() {
   console.log(`${this.wish} Arun`);
 }
 
-greet ('Welcome', content);
+greet('Welcome', content);
