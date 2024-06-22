@@ -1,3 +1,4 @@
+// writing array values to a file(sample.txt) using writeFile.
 const fs = require('node:fs');
 
 const arr = [2, 4, 6, 7, 912, 34];
