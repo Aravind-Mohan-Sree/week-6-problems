@@ -1,5 +1,5 @@
 // program for finding the smallest word in a sentence.
-const str = 'i love you';
+const str = 'he is a good boy';
 
 const arr = str.split(' ');
 
