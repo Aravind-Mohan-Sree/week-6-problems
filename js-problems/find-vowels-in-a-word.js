@@ -1,22 +1,15 @@
 // find the vowels and its occurance in a word.
 const word = 'aravind';
 const vowels = ['a', 'e', 'i', 'o', 'u'];
-const map = new Map();
+const map = {};
 
-vowels.forEach((ele) => { 
-  let count = 0;
-
+for (const ele of vowels) {
   for (let i = 0; i < word.length; i++) {
-    if (word.toLowerCase().includes(ele, i)) {
-      count++;
-      i = word.toLowerCase().indexOf(ele, i);      
-    } else {
-      map.set(ele, count);
-      return;
+    if (word.includes(ele, i)) {
+      map[ele] = (map[ele] || 0) + 1;
+      i = word.indexOf(ele, i);
     }
   }
-
-  map.set(ele, count);
-});
+}
 
 console.log(map);
