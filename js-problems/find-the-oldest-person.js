@@ -3,10 +3,10 @@ const person = [{name: 'sam', age: 34}, {name: 'arun', age: 19}, {name: 'das', a
 
 const oldPerson = person.reduce((acc, ele, ind, arr) => {
   if (acc.age > ele.age) {
-    return acc;
+    return acc = acc;
   }  
 
-  return ele;
+  return acc = ele;
 });
 
 console.log(oldPerson.name);

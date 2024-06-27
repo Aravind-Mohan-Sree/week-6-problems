@@ -2,6 +2,6 @@
 const num = 6135334515;
 const strArr = num.toString().split('');
 
-const sum = Number(strArr[0]) + Number(strArr[strArr.length - 1]);
+const sum = +strArr[0] + +strArr[strArr.length - 1];
 
 console.log(sum);
