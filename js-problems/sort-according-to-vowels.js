@@ -5,7 +5,7 @@ const vowels = 'aeiouAEIOU';
 
 for (const ele of words) {
   const count = ele.split('').filter((ele) => {return vowels.includes(ele)}).length;
-
+  
   countArr.push([ele, count]);
 }
 
