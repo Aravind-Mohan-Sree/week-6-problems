@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-
 <body>
-  <h1>Hello!</h1>
+  <button id="btn">click</button>
 
   <script>
-      document.querySelector('h1').addEventListener('click', function () {
-        this.style.backgroundColor = 'green';
-      });
+    const customEvent = new CustomEvent('myEvent', {
+      detail: {
+        message: 'welcome'
+      }
+    });
+
+    const tarElem = document.querySelector('#btn');
+
+    tarElem.addEventListener('myEvent', (e) => {
+      const event = e.detail;
+      console.log(event.message);
+    });
+
+    tarElem.addEventListener('click', function () {
+      tarElem.dispatchEvent(customEvent);
+    });
   </script>
 </body>
-
 </html>
